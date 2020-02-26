@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scrolling-Effects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+   
+    <section class="zoom">
+        <img src="./img/text.png" class="text">
+        <img src="./img/cloud01.png" class="layer01">
+        <img src="./img/cloud02.png" class="layer02">
+    </section>
+    <section class="content">
+        <h2>Travel is meaningful</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem autem nihil eos laudantium blanditiis sequi
+            vitae alias explicabo provident beatae accusantium at pariatur fuga dolore in excepturi, dolorum, delectus
+            quam.
+            Excepturi, culpa odit numquam velit provident in distinctio eos est eius, quis eligendi cumque perspiciatis.
+            Modi blanditiis et animi exercitationem fugit nostrum dolore totam rem delectus impedit, itaque magni optio.
+            Sapiente earum, aliquid cum libero nisi ratione porro blanditiis et amet eos maxime, quidem voluptas tempora
+            aperiam corrupti quam soluta ipsa similique doloremque. Quas, eum deleniti? Eum laborum distinctio odit!
+            Natus in alias reiciendis consectetur nam, ullam, odio iusto porro, quisquam ex debitis ipsam doloribus
+            eaque. Excepturi labore, commodi, maxime consequatur, ullam est officiis neque ducimus quia culpa quam nam.
+            Necessitatibus placeat animi delectus non ratione debitis iste repellendus, voluptatibus deleniti sequi aut
+            quas! Placeat accusamus expedita consequuntur quo illo itaque, praesentium esse autem molestiae ducimus
+            commodi maxime aliquam! Facere.
+            Quis tempore ducimus repellat? Sed, consectetur. Necessitatibus quisquam quia consequatur doloribus quod
+            ratione vero natus dolores, minus nulla deserunt. Distinctio autem est inventore alias, quod animi fuga!
+            Deleniti, perspiciatis aliquid.
+            Eaque veritatis repellat iste corrupti dignissimos odio odit, vitae mollitia nulla numquam qui. Assumenda
+            deleniti, cum, quibusdam officia molestiae quae, facilis illum ipsam sit quia eos vitae? Ipsum, nostrum
+            velit.
+            Adipisci ullam, ipsam repellat iste deleniti quas id odio necessitatibus beatae suscipit ratione aut magni
+            aliquam quo facere libero. Animi eaque delectus nemo cupiditate voluptas iste maxime ratione labore
+            reprehenderit!
+            Id reprehenderit fugiat voluptatem expedita totam inventore dignissimos, deleniti eaque rem. Reprehenderit
+            aliquid qui facilis rem et commodi saepe dolores libero voluptatum, vel minus iure quod est ea porro fugiat.
+        </p>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            $('.layer01').css({
+                width: (100 + scroll / 5) + "%",
+            })
+            $('.layer02').css({
+                width: (100 + scroll / 5) + "%",
+                left: scroll / 50 + "%"
+            })
+            $('.text').css({
+
+                top: - scroll / 15 + "%"
+            })
+
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
