@@ -3,7 +3,104 @@ body{
     padding: 0;
     font-family: 微軟正黑體;
 }
+/* 載入動畫 */
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9ab9bc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    animation: fadeout 11s linear forwards;
+}
 
+@keyframes fadeout
+{
+    0%,91%
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+    100%
+    {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loading .bar{
+    position: relative;
+    width: 400px;
+    height: 40px;
+    background: transparent;
+    margin: 0 20px;
+    border: solid 2px #fff;
+    box-sizing: border-box;
+}
+.loading .bar::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 進度條在跑的顏色 */
+    background: #507072;
+    transform-origin: left;
+    animation: animate 10s linear forwards;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: scaleX(0)
+    }
+    100%
+    {
+        transform: scaleX(1)
+    }
+}
+
+.loading .bar::after{
+    content: 'loading...';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 800;
+    letter-spacing: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 36px;
+    color: #fff;
+    font-size: 20px;
+    /* mix-blend-mode: difference; */
+}
+.content01{
+    animation: fadein 12s linear forwards;
+}
+
+@keyframes fadein
+{
+    0%
+    {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100%
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* 捲動效果 */
 section.zoom{
     width: 100%;
     height: 1000px;
@@ -11,10 +108,9 @@ section.zoom{
     overflow: hidden;
     background: url(./img/bg.jpg);
     background-size: cover;
-
 }
 
-section.zoom:before{
+section.zoom::before{
     content: '';
     position: absolute;
     bottom: 0;
