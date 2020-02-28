@@ -1,8 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 微軟正黑體;
-    
+    font-family: 微軟正黑體; 
 }
 /* 載入動畫 */
 .loading{
@@ -147,8 +146,10 @@ section.zoom .layer02{
 
 section.zoom .text{
     /* top: 0;  */
-    left: 130px;
+    /* left: 130px; */
     width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     position: absolute;
     transform: translateY(35%);
     
