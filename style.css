@@ -103,6 +103,11 @@ body{
     }
 }
 
+.navbar{
+    background: #9ab9bc !important;
+}
+
+
 /* 捲動效果 */
 section.zoom{
     width: 100%;
