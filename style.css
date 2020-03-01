@@ -15,7 +15,7 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 15;
-    animation: fadeout 11s linear forwards;
+    animation: fadeout 7s linear forwards;
 }
 
 @keyframes fadeout
@@ -53,7 +53,7 @@ body{
     /* 進度條在跑的顏色 */
     background: #507072;
     transform-origin: left;
-    animation: animate 10s linear forwards;
+    animation: animate 6s linear forwards;
 }
 
 @keyframes animate
@@ -85,7 +85,7 @@ body{
     /* mix-blend-mode: difference; */
 }
 .content_box{
-    animation: fadein 12s linear forwards;
+    animation: fadein 8s linear forwards;
 }
 
 @keyframes fadein
