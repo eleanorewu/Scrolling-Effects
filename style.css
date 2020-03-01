@@ -146,12 +146,11 @@ section.zoom .layer02{
 
 section.zoom .text{
     /* top: 0;  */
-    /* left: 130px; */
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    /* left: 160px; */
     position: absolute;
-    transform: translateY(35%);
+    left: 50%;
+    transform: translate(-50%,35%);
     
 }
 
